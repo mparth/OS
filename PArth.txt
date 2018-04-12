@@ -1,0 +1,118 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+struct student
+{
+	int pen,paper,question;
+	int status;
+}s[3];
+int main()
+{
+	int a,b,c,ch;
+	char CH;
+do{	
+	cout<<"Enter \na)1 If student has Pen. \nb)2 If student has Paper.\nc)3 If student has Question Paper\n";
+	cout<<"Student 1 has?\n";
+	cin>>a;
+	cout<<"Student 2 has?\n";
+	cin>>b;
+	cout<<"Student 3 has?\n";
+	cin>>c;
+	cout<<"\n";
+	if(a==1)
+	{
+		cout<<"Student 1 has Pen\n";
+		s[1].pen=1;
+		s[1].paper=0;
+		s[1].question=0;
+	}
+	else
+	if(a==2)
+	{
+		cout<<"Student 1 has Paper\n";
+		s[1].pen=0;
+		s[1].paper=1;
+		s[1].question=0;
+	}
+	else
+	{
+		cout<<"Student 1 has Question Paper\n";
+		s[1].question=1;
+	}
+	if(b==1)
+	{
+		cout<<"Student 2 has Pen\n";
+		s[2].pen=1;
+		s[2].paper=0;
+		s[2].question=0;
+	}
+	else
+	if(b==2)
+	{
+		cout<<"Student 2 has Paper\n";
+		s[2].pen=0;
+		s[2].paper=1;
+		s[2].question=0;
+	}
+	else
+	{
+		cout<<"Student 2 has Question Paper\n";
+		s[2].pen=0;
+		s[2].paper=0;
+		s[2].question=1;
+	}
+	if(c==1)
+	{
+		cout<<"Student 3 has Pen\n";
+		s[3].pen=1;
+		s[3].paper=0;
+		s[3].question=0;
+	}
+	else
+	if(c==2)
+	{
+		cout<<"Student 3 has Paper\n";
+		s[3].pen=0;
+		s[3].paper=1;
+		s[3].question=0;
+	}
+	else
+	{
+		cout<<"Student 3 has Question Paper\n";
+		s[3].pen=0;
+		s[3].paper=0;
+		s[3].question=1;
+	}
+	
+	
+	cout<<"\nEnter what teacher has put on shared table :";
+	cout<<"\nEnter \na)1 For Paper and Question Paper. \nb)2 For Pen and Question Paper.\nc)3 For Pen and Paper.\n";
+	cin>>ch;
+	for(int i=0;i<3;i++)
+	{
+		if(s[i].pen==1 && ch==1)
+		{
+			cout<<"Assignment completed by Student "<<i;
+			s[i].status=1;
+		}
+		else
+		if(s[i].paper==1 && ch==2)
+		{
+			cout<<"Assignment completed by Student "<<i;
+			s[i].status=1;
+		}
+		else
+		if(s[i].question==1 && ch==3)
+		{
+			cout<<"Assignment completed by Student "<<i;
+			s[i].status=1;
+		}
+		else
+		{
+			s[i].status=0;
+		}
+	}
+	cout<<"\nEnter Y if you want to continue entering data :-";
+	cin>>CH;
+}while(CH=='Y'||CH=='y');
+}
